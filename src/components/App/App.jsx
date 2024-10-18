@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import ProfilePanel from "../Panels/ProfilePanel.jsx"
-import PotteryPanel from "../Panels/PotteryPanel.jsx"
+import ProfilePanel from "../Panels/ProfilePanel.jsx";
+import PotteryPanel from "../Panels/PotteryPanel.jsx";
+import AboutPanel from "../Panels/AboutPanel.jsx";
+import ExperiencePanel from "../Panels/ExperiencePanel.jsx";
+import ProjectsPanel from "../Panels/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
@@ -33,13 +36,12 @@ function App() {
       panel = <ProjectsPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Pottery":
-      console.log(currentPanel.activePanel)
       panel = <PotteryPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     }
 
   return (
-    <main className="w-screen h-screen p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
+    <main className="w-screen h-screen overflow-auto p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
       <container>
         {panel}
         <Menu panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
