@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ProfilePanel from "../Panels/ProfilePanel.jsx"
 import PotteryPanel from "../Panels/PotteryPanel.jsx"
-import { THEME_COLORS } from "../../constants/colors.js";
+import { THEME_COLORS } from "../../constants/themeColors.js";
+import Menu from "../Menu/Menu.jsx"
 import './App.css'
 
 function App() {
@@ -17,29 +18,32 @@ function App() {
     setCurrentPanel(tab)
   }
 
-  let content;
+  let panel;
   
   switch(currentPanel) {
     case "Dyson Breakstone":
-      content = <ProfilePanel panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProfilePanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "About":
-      content = <AboutPanel panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <AboutPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Experience":
-      content = <ExperiencePanel panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ExperiencePanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Projects":
-      content = <ProjectsPanel panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProjectsPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Pottery":
-      content = <PotteryPanel panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <PotteryPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     }
 
   return (
     <main className="w-screen h-screen p-8 ease-in ease-out duration-300" style={{background: `${mainBgColor}`}}>
-      {content}
+      <container>
+        {panel}
+        <Menu panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />
+      </container>
     </main>
   )
 }
