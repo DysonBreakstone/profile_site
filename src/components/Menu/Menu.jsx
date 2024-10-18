@@ -28,7 +28,7 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   );
   
   return (
-    <nav className="flex flex-col fixed top-8 right-8 bottom-8 bg-gray-700 bg-opacity-75 w-96 rounded-lg gap-6 items-end">
+    <nav className="flex flex-col fixed top-8 right-8 bg-gray-700 bg-opacity-75 w-96 rounded-lg gap-6 items-end">
       <ul className="flex flex-col w-full items-end p-2 pr-2">{menuItems}</ul>
     </nav>
   );
