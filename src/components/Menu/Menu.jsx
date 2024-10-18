@@ -15,7 +15,7 @@ export default function Menu({ panel, changeBackground, changePanel }) {
       key={tab} 
       className="flex w-full justify-end p-6 pr-6 box-border"  
       onMouseEnter={(e) => toggleTheme(tab)}
-      onMouseLeave={(e) => toggleTheme("default")}>
+      onMouseLeave={(e) => toggleTheme(panel)}>
         <div className="flex text-end box-border">
           <p 
             style={{ fontSize: tab === panel ? '1.875rem' : '1.5rem' }}

@@ -6,43 +6,43 @@ import Menu from "../Menu/Menu.jsx"
 import './App.css'
 
 function App() {
-  const [mainBgColor, setMainBgColor] = useState(THEME_COLORS.default);
-  const [currentPanel, setCurrentPanel] = useState("Dyson Breakstone")
-
-  const changeBackground = (color) => {
-    setMainBgColor(color || "white")
-  }
+  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson Breakstone"});
 
   const changePanel = (tab) => {
     console.log(tab)
-    setCurrentPanel(tab)
+    setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab })
+  }
+
+  const changeBackground = (hoveredTab) => {
+    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel })
   }
 
   let panel;
   
-  switch(currentPanel) {
+  switch(currentPanel.activePanel) {
     case "Dyson Breakstone":
-      panel = <ProfilePanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProfilePanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "About":
-      panel = <AboutPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <AboutPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Experience":
-      panel = <ExperiencePanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ExperiencePanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Projects":
-      panel = <ProjectsPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProjectsPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     case "Pottery":
-      panel = <PotteryPanel key={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      console.log(currentPanel.activePanel)
+      panel = <PotteryPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
       break;
     }
 
   return (
-    <main className="w-screen h-screen p-8 ease-in ease-out duration-300" style={{background: `${mainBgColor}`}}>
+    <main className="w-screen h-screen p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
       <container>
         {panel}
-        <Menu panel={currentPanel} changeBackground={changeBackground} changePanel={changePanel} />
+        <Menu panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
       </container>
     </main>
   )
