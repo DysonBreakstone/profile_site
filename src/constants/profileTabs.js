@@ -1,4 +1,5 @@
 const profileTabs = [
+  "Dyson Breakstone",
   "About",
   "Experience",
   "Projects",
