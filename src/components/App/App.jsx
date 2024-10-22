@@ -24,19 +24,19 @@ function App() {
   
   switch(currentPanel.activePanel) {
     case "Dyson Breakstone":
-      panel = <ProfilePanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProfilePanel key={currentPanel.activePanel} />;
       break;
     case "About":
-      panel = <AboutPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <AboutPanel key={currentPanel.activePanel} />;
       break;
     case "Experience":
-      panel = <ExperiencePanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ExperiencePanel key={currentPanel.activePanel} />;
       break;
     case "Projects":
-      panel = <ProjectsPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <ProjectsPanel key={currentPanel.activePanel} />;
       break;
     case "Pottery":
-      panel = <PotteryPanel key={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />;
+      panel = <PotteryPanel key={currentPanel.activePanel} />;
       break;
     }
 
