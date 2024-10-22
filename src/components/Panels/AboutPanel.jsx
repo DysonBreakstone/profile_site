@@ -13,7 +13,7 @@ export default function AboutPanel() {
         <section id="aboutPhotoContainer" className="flex h-max p-6">
           <img src={`${maroonBells}` } className="max-h-96 min-w-72 grow rounded-full" />
         </section>
-        <section id="aboutInfo" className="flex flex-col w-auto grow bg-white rounded-md m-6 p-6">
+        <section id="aboutInfo" className="flex flex-col w-auto grow border-slate-700 border-b-2 rounded-md m-6 p-6">
           <h3 id="snapshot" className="text-slate-600 pb-6">Snapshot</h3>
           <p id="aboutDescription" className="text-slate-700 indent-4 text-justify">
             I am an early-career software engineer with 1.5 years of experience in web development.
