@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import maroonBells from "../../assets/maroonBells.jpg"
 
 
 export default function AboutPanel() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   return (
     <div 
       id="aboutPanel" 
-      className="flex overflow-auto flex w-full h-full rounded-lg bg-cover items-top justify-left"
+      className={`flex overflow-auto flex w-full h-full rounded-lg bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
       <section id="aboutContent" className="flex w-full h-max justify-left">
         <section id="aboutPhotoContainer" className="flex h-max p-6">

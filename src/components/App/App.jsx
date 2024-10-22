@@ -42,10 +42,10 @@ function App() {
 
   return (
     <main className="w-screen h-screen overflow-auto p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
-      <container>
+      <div className="w-full h-full rounded-lg" id="contentBox" style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
         {panel}
         <Menu panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
-      </container>
+      </div>
     </main>
   )
 }
