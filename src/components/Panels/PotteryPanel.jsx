@@ -12,7 +12,7 @@ export default function PotteryPanel() {
   return (
     <div 
       id="potteryPanel" 
-      className={`overflow-auto flex w-full h-full rounded-lg bg-cover items-center justify-end transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`overflow-auto flex w-full h-full bg-cover items-center justify-end transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{ backgroundImage: `url(${bgPhoto})`}}>
 
     </div>

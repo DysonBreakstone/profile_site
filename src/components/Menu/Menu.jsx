@@ -13,13 +13,13 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   const menuItems = profileTabs.map(tab =>
     <li
       key={tab} 
-      className="flex w-full justify-end p-6 pr-6 box-border"  
+      className="flex w-1/5 justify-center items-center box-border h-16"  
       onMouseEnter={(e) => toggleTheme(tab)}
       onMouseLeave={(e) => toggleTheme(panel)}>
         <div className="flex text-end box-border">
           <p 
             style={{ fontSize: tab === panel ? '1.875rem' : '1.5rem' }}
-            className={`flex text-white font-bold box-border ${tab === panel ? 'border-white' : 'border-transparent'} ease-in ease-out duration-300 hover:cursor-pointer hover:border-white border-b-2`}
+            className={`flex text-black font-bold box-border ${tab === panel ? 'border-black' : 'border-transparent'} ease-in ease-out duration-300 hover:cursor-pointer hover:border-black border-b-2`}
             onClick={() => changePanel(tab)}>
               {tab}
           </p>
@@ -28,8 +28,8 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   );
   
   return (
-    <nav className="flex flex-col fixed top-8 right-8 bg-gray-700 bg-opacity-75 w-96 rounded-lg gap-6 items-end">
-      <ul className="flex flex-col w-full items-end p-2 pr-2">{menuItems}</ul>
+    <nav className="flex w-full justify-between shadow-lg fixed bg-white bg-opacity-70 top-0 z-50">
+      <ul className="flex w-full items-center justify-between p-2 ">{menuItems}</ul>
     </nav>
   );
 };

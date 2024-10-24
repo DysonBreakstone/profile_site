@@ -9,7 +9,7 @@ import Menu from "../Menu/Menu.jsx"
 import './App.css'
 
 function App() {
-  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson Breakstone"});
+  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
 
   const changePanel = (tab) => {
     console.log(tab)
@@ -20,31 +20,31 @@ function App() {
     setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel })
   }
 
-  let panel;
+  let content;
   
   switch(currentPanel.activePanel) {
-    case "Dyson Breakstone":
-      panel = <ProfilePanel key={currentPanel.activePanel} />;
+    case "Dyson":
+      content = <ProfilePanel key={currentPanel.activePanel} />;
       break;
     case "About":
-      panel = <AboutPanel key={currentPanel.activePanel} />;
+      content = <AboutPanel key={currentPanel.activePanel} />;
       break;
     case "Experience":
-      panel = <ExperiencePanel key={currentPanel.activePanel} />;
+      content = <ExperiencePanel key={currentPanel.activePanel} />;
       break;
     case "Projects":
-      panel = <ProjectsPanel key={currentPanel.activePanel} />;
+      content = <ProjectsPanel key={currentPanel.activePanel} />;
       break;
     case "Pottery":
-      panel = <PotteryPanel key={currentPanel.activePanel} />;
+      content = <PotteryPanel key={currentPanel.activePanel} />;
       break;
     }
 
   return (
-    <main className="w-screen h-screen overflow-auto p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
-      <div className="w-full h-full rounded-lg" id="contentBox" style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
-        {panel}
-        <Menu panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
+    <main className="w-screen h-screen">
+      <div className="w-full h-full" id="contentBox" style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
+        <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
+        {content}
       </div>
     </main>
   )

@@ -13,7 +13,7 @@ export default function ProfilePanel() {
     <div 
       id="profilePanel" 
       style={{ backgroundImage: `url(${profilePhoto})`}} 
-      className={`flex w-full h-full rounded-lg bg-cover items-center justify-end transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      className={`flex w-full h-full bg-cover items-center justify-end transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
     </div>
   );
 };

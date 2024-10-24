@@ -13,7 +13,7 @@ export default function AboutPanel() {
   return (
     <div 
       id="aboutPanel" 
-      className={`flex overflow-auto flex w-full h-full rounded-lg bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`flex overflow-auto flex w-full h-full bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-24`}
       style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
       <section id="aboutContent" className="flex w-full h-max justify-left">
         <section id="aboutPhotoContainer" className="flex h-max p-6">
