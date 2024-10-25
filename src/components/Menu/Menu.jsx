@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import profileTabs from "../../constants/profileTabs.js";
 import { THEME_COLORS } from "../../constants/themeColors.js";
+import profilePicture from "../../assets/profilePicture.jpg"
 
 export default function Menu({ panel, changeBackground, changePanel }) {
   let themeColor;
@@ -28,8 +29,9 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   );
   
   return (
-    <nav className="flex w-full justify-between shadow-lg fixed bg-white bg-opacity-70 top-0 z-50">
-      <ul className="flex w-full items-center justify-between p-2 ">{menuItems}</ul>
+    <nav className="flex w-full justify-between shadow-lg px-4 fixed bg-white bg-opacity-70 top-0 z-50">
+      <img src={profilePicture} className="rounded-full w-24 h-24"></img>
+      <ul className="flex w-full items-center justify-between p-2">{menuItems}</ul>
     </nav>
   );
 };

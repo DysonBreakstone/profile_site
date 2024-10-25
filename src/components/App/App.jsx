@@ -7,6 +7,7 @@ import ProjectsPanel from "../Panels/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
+import bgPhoto from "/assets/backgroundPhoto.jpg";
 
 function App() {
   const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
@@ -41,8 +42,8 @@ function App() {
     }
 
   return (
-    <main className="w-screen h-screen">
-      <div className="w-full h-full" id="contentBox" style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
+    <main className="w-screen h-screen overflow-hidden">
+      <div className="w-full h-full bg-cover" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
         <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
         {content}
       </div>

@@ -13,11 +13,14 @@ export default function ExperiencePanel() {
 
   const jobs = jobExperience.map(job =>
     <li
-      key={`${job["organization"]}Card`} className="flex">
+      key={`${job["organization"]}Card`} className="flex h-auto">
+        <div className="flex w-1/3 items-center justify-center">
+          <img src={job.logoUrl} className="aspect-auto h-1/2 rounded-xl"></img>
+        </div>
         <div className="experience-card m-4 w-2/3">
-          <div className="flex w-full justify-between">
+          <div className="flex flex-col w-full justify-between">
             <h3 className="pb-1" >{job.organization}</h3>
-            <a href={job["website"]} className="mb-1">Visit the website</a>
+            <a href={job["website"]} className="mb-1 w-max">Visit the website</a>
           </div>
           <div className="pb-2 border-b-2 w-full text-end mb-6">
             <h5 className="text-slate-700 pb-1">{job.title}</h5>
@@ -38,17 +41,13 @@ export default function ExperiencePanel() {
             </div>
           }
         </div>
-        <div className="flex w-1/3 items-center justify-center">
-          <img src={job.logoUrl} className="aspect-auto h-1/2 rounded-xl"></img>
-        </div>
     </li>
     )
 
   return (
     <div 
       id="profilePanel"  
-      className={`h-full pt-32 overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 p-8 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
+      className={`h-full pt-32 overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 p-8 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <ul className="flex flex-col">
           {jobs}
         </ul>
