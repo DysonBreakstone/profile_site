@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { THEME_COLORS } from "../../constants/themeColors.js";
 import maroonBells from "../../assets/maroonBells.jpg"
 
 
@@ -13,13 +12,12 @@ export default function AboutPanel() {
   return (
     <div 
       id="aboutPanel" 
-      className={`flex overflow-auto flex w-full h-full bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-24`}
-      style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
+      className={`flex overflow-auto flex w-full h-full bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-24`}>
       <section id="aboutContent" className="flex w-full h-max justify-left">
-        <section id="aboutPhotoContainer" className="flex h-max p-6">
+        <section id="aboutPhotoContainer" className="flex h-max p-6 max-w-1/3">
           <img src={`${maroonBells}` } className="max-h-96 min-w-72 grow rounded-full" />
         </section>
-        <section id="aboutInfo" className="flex flex-col w-auto grow border-slate-700 border-b-2 rounded-md m-6 p-6">
+        <section id="aboutInfo" className="flex flex-col border-slate-700 m-6 p-6 max-w-1/3">
           <h3 id="snapshot" className="text-slate-600 pb-6">Snapshot</h3>
           <p id="aboutDescription" className="text-slate-700 indent-4 text-justify">
             I am an early-career software engineer with 1.5 years of experience in web development.
@@ -35,7 +33,9 @@ export default function AboutPanel() {
             abroad. 
           </p>
         </section>
-        <section id="aboutBuffer" className="flex min-w-96"></section>
+        <section id="subNav" className="min-w-1/3">
+
+        </section>
       </section>
 
 
