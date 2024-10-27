@@ -7,7 +7,7 @@ import ProjectsPanel from "../Panels/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
-import bgPhoto from "/assets/backgroundPhoto.jpg";
+import bgPhoto from "/assets/background5.jpg";
 
 function App() {
   const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
