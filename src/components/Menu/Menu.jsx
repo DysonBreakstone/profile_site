@@ -29,8 +29,9 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   );
   
   return (
-    <nav className="flex w-full justify-between shadow-lg px-4 fixed bg-white bg-opacity-70 top-0 z-50">
-      <img src={profilePicture} className="rounded-full w-24 h-24"></img>
+    <nav className="flex w-full justify-between shadow-lg px-4 fixed bg-white bg-opacity-70 top-0 z-50 p-2">
+      <div id="profileIcon" className="rounded-full w-24 h-24 rounded-se-2xl shadow-2xl bg-cover" style={{ backgroundImage: `url(${profilePicture})`}}>
+      </div>
       <ul className="flex w-full items-center justify-between p-2">{menuItems}</ul>
     </nav>
   );
