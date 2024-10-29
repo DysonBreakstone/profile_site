@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import maroonBells from "../../assets/maroonBells.jpg"
 
 
 export default function AboutPanel() {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  const handleImageLoaded = () => {
     setIsLoaded(true)
-  }, [])
+  }
 
   return (
     <div 
       id="aboutPanel" 
       className={`flex overflow-auto flex w-full h-full bg-cover items-top justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-24`}>
+        {!isLoaded && <div id="loading"> Loading... </div>}
       <section id="aboutContent" className="flex w-full h-max justify-left">
         <section id="aboutPhotoContainer" className="flex h-max p-6 max-w-1/3">
-          <img src={`${maroonBells}` } className="max-h-96 min-w-72 grow rounded-full" />
+          <img src={`${maroonBells}` } className="max-h-96 min-w-72 grow rounded-full" onLoad={handleImageLoaded} style={{ display: isLoaded ? "flex" : "none" }}/>
         </section>
         <section id="aboutInfo" className="flex flex-col border-slate-700 m-6 p-6 max-w-1/3">
           <h3 id="snapshot" className="text-slate-600 pb-6">Snapshot</h3>
