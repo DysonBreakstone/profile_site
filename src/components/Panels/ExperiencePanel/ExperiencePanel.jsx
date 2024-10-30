@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { THEME_COLORS } from "../../constants/themeColors";
-import jobExperience from "../../constants/jobExperience";
-import "./Panel.css"
+import jobExperience from "../../../constants/ExperiencePanel/jobExperience";
+import "../Panel.css"
 
 
 export default function ExperiencePanel() {

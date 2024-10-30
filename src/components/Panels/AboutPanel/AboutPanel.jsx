@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import maroonBells from "../../assets/maroonBells.jpg"
+import maroonBells from "../../../../src/assets/AboutPanel/maroonBells.jpg"
 
 
 export default function AboutPanel() {

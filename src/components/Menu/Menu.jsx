@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import profileTabs from "../../constants/profileTabs.js";
+import profileTabs from "../../constants/Menu/profileTabs.js";
 import { THEME_COLORS } from "../../constants/themeColors.js";
-import profilePicture from "../../assets/profilePicture.jpg"
+import profilePicture from "/src/assets/Menu/profilePicture.jpg"
 
 export default function Menu({ panel, changeBackground, changePanel }) {
   let themeColor;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { THEME_COLORS } from "../../constants/themeColors";
+import { THEME_COLORS } from "../../../constants/themeColors";
 
 export default function ProjectsPanel() {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -2,8 +2,7 @@ const profileTabs = [
   "Dyson",
   "About",
   "Experience",
-  "Projects",
-  "Pottery"
+  "Projects"
 ]
 
 export default profileTabs;

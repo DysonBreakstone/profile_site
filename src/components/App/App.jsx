@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import ProfilePanel from "../Panels/ProfilePanel.jsx";
-import PotteryPanel from "../Panels/PotteryPanel.jsx";
-import AboutPanel from "../Panels/AboutPanel.jsx";
-import ExperiencePanel from "../Panels/ExperiencePanel.jsx";
-import ProjectsPanel from "../Panels/ProjectsPanel.jsx";
+import ProfilePanel from "../Panels/ProfilePanel/ProfilePanel.jsx";
+import AboutPanel from "../Panels/AboutPanel/AboutPanel.jsx";
+import ExperiencePanel from "../Panels/ExperiencePanel/ExperiencePanel.jsx";
+import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
-import bgPhoto from "/assets/background5.jpg";
+import bgPhoto from "/src/assets/App/background5.jpg";
 
 function App() {
   const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
