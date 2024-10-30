@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import profileTabs from "../../constants/Menu/profileTabs.js";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import profilePicture from "/src/assets/Menu/profilePicture.jpg"

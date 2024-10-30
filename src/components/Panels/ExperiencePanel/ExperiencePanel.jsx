@@ -46,7 +46,7 @@ export default function ExperiencePanel() {
   return (
     <div 
       id="profilePanel"  
-      className={`h-full pt-32 overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 p-8 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      className={`h-full overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 p-8 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <ul className="flex flex-col">
           {jobs}
         </ul>
