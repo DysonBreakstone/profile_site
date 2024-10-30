@@ -12,7 +12,6 @@ function App() {
   const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
 
   const changePanel = (tab) => {
-    console.log(tab)
     setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab })
   }
 
@@ -42,7 +41,7 @@ function App() {
 
   return (
     <main className="w-screen h-screen overflow-hidden">
-      <div className="w-full h-full bg-cover" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
+      <div className="w-full h-full bg-cover pt-32" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
         <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
         {content}
       </div>
