@@ -12,12 +12,12 @@ function App() {
   const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
 
   const changePanel = (tab) => {
-    setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab })
-  }
+    setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab });
+  };
 
   const changeBackground = (hoveredTab) => {
-    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel })
-  }
+    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel });
+  };
 
   let content;
   
@@ -37,11 +37,11 @@ function App() {
     case "Pottery":
       content = <PotteryPanel key={currentPanel.activePanel} />;
       break;
-    }
+  };
 
   return (
     <main className="w-screen h-screen overflow-hidden">
-      <div className="w-full h-full bg-cover pt-32" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
+      <div className="w-full h-full bg-auto pt-28 overflow-auto" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
         <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
         {content}
       </div>
