@@ -1,0 +1,13 @@
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.left {
+  border-width: 15px 20px 15px 0;
+  border-color: transparent black transparent transparent;
+}
+.right {
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent black;
+}
