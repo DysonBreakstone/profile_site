@@ -19,7 +19,7 @@ export default function AboutSubMenu({ subPanel, changeSubPanel }) {
     );
   
   return (
-    <nav className="flex w-1/4 min-h-full text-white px-4 justify-center">
+    <nav className="flex w-1/4 min-h-full text-white justify-center">
       <ul className="flex w-full h-52 flex-col bg-black bg-opacity-55 items-end gap-4 p-2 rounded-md py-4 justify-center">
         {subMenuItems}
       </ul>
