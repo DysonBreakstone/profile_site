@@ -4,7 +4,6 @@ import developerDesk from "../../../../assets/AboutPanel/developerDesk.jpg"
 import "../AboutPanel.css"
 
 export default function Snapshot({handleImageLoaded, isLoaded}) {
-  console.log(isLoaded)
   return (
     <section key={"snapshotSubsection"} id="aboutContent" className="flex w-3/4 h-full justify-between items-center overflow-hidden">
       <section id="photoContainer" className="flex flex-col h-full w-1/2 overflow-auto no-scrollbar">
@@ -19,7 +18,7 @@ export default function Snapshot({handleImageLoaded, isLoaded}) {
           </p>
           <p>
             I grew up in Calais, Vermont, a town with one paved road and a general store. 
-            I've always had an interest in technology, but I didn't have the opportunity to 
+            I've always loved technology, but I didn't have the opportunity to 
             attend a university after graduating high school. Up until 2013 when I moved
             to Colorado, I worked a number of jobs in the restaurant and service industry 
             while volunteering as an EMT.
@@ -28,11 +27,11 @@ export default function Snapshot({handleImageLoaded, isLoaded}) {
             After moving to Colorado, I worked my way through an Associates degree in radiologic 
             technology and began a career in medical imaging. By taking travel assignments to 
             understaffed hospitals during the pandemic, I was finally able to put enough money
-            aside to attend a programming bootcamp.
+            aside to attend the Turing school, the finest programming bootcamp in the state.
           </p>
           <p>
-            I have been a software engineer for over a year now, and I have loved every moment
-            of it.
+            I began my first role as a Software engineer in August of 2023, and I hope to have 
+            a long career doing what I love in tech.
           </p>
         </div>
       </section>

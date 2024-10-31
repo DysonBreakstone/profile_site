@@ -1,7 +1,6 @@
 import stellarator from "../../../../assets/AboutPanel/stellarator.jpg"
 
 export default function Snapshot({handleImageLoaded, isLoaded}) {
-  console.log(isLoaded)
   return (
     <section key={"snapshotSubsection"} id="aboutContent" className="flex w-3/4 h-full justify-between items-center overflow-hidden">
       <section id="aboutPhotoContainer" className="flex h-max justify-center w-1/2">

@@ -1,8 +1,8 @@
 const aboutSubMenuOptions = [
   "Snapshot",
   "Personal/Hobbies",
-  "Pottery",
-  "Life Story"
+  "Life Story",
+  "Pottery"
 ];
 
 export default aboutSubMenuOptions;

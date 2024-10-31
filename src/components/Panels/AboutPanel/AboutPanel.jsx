@@ -3,6 +3,7 @@ import AboutSubMenu from "./AboutSubMenu/AboutSubMenu.jsx";
 import Snapshot from "./Snapshot/Snapshot.jsx"
 import PersonalLife from "./PersonalLife/PersonalLife.jsx"
 import LifeStory from "./LifeStory/LifeStory.jsx"
+import Pottery from "./Pottery/Pottery.jsx"
 
 
 export default function AboutPanel() {
@@ -26,11 +27,11 @@ export default function AboutPanel() {
     case "Personal/Hobbies":
       content = <PersonalLife isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
       break;
-    case "Pottery":
-      content = <Snapshot isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
-      break;
     case "Life Story":
       content = <LifeStory isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
+      break;
+    case "Pottery":
+      content = <Pottery isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
       break;
   }
 

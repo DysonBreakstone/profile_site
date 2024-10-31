@@ -3,7 +3,7 @@ const jobExperience = [
     "organization": "Software for Research",
     "title": "Software Engineer",
     "dates": "August 2023 - Present",
-    "description": "Software for Research creates web applications for researchers conducting behavioral health studies at institutions such as Johns Hopkins University, the MD Anderson Cancer Center, and Harvard University. The main functionality of these apps revolve around sending and receiving text messages, collecting biometric data, and preparing reports for researchers.",
+    "description": "Software for Research creates web applications for researchers conducting behavioral health studies at institutions such as Johns Hopkins University, the MD Anderson Cancer Center, and Harvard University. The main functionality of these apps revolve around automating the sending and receiving of text messages and collection of biometric data, and preparing reports for researchers.",
     "accomplishments": [
       "Created and implemented a webhook and database models to automate the ordering of and collection of weight data from Bodytrace scales, a remote, API-enabled weight tracking device.", 
       "Designed and implemented a new method of grouping and dynamically selecting text message content based on the individual attributes of participants, streamlining the main functionality of the application while maintaining backwards compatibility.",

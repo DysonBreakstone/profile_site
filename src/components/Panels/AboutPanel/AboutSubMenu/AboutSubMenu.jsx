@@ -1,9 +1,6 @@
 import aboutSubMenuOptions from "../../../../constants/AboutPanel/AboutSubMenu/aboutSubMenuOptions.js";
 
 export default function AboutSubMenu({ subPanel, changeSubPanel }) {
-  
-  console.log(subPanel);
-
   const subMenuItems = aboutSubMenuOptions.map(option =>
     <li
       key={option}
