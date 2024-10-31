@@ -1,9 +1,8 @@
 const profileTabs = [
-  "Dyson Breakstone",
+  "Dyson",
   "About",
   "Experience",
-  "Projects",
-  "Pottery"
+  "Projects"
 ]
 
 export default profileTabs;

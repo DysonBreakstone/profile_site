@@ -1,50 +1,49 @@
 import React, { useState } from "react";
-import ProfilePanel from "../Panels/ProfilePanel.jsx";
-import PotteryPanel from "../Panels/PotteryPanel.jsx";
-import AboutPanel from "../Panels/AboutPanel.jsx";
-import ExperiencePanel from "../Panels/ExperiencePanel.jsx";
-import ProjectsPanel from "../Panels/ProjectsPanel.jsx";
+import ProfilePanel from "../Panels/ProfilePanel/ProfilePanel.jsx";
+import AboutPanel from "../Panels/AboutPanel/AboutPanel.jsx";
+import ExperiencePanel from "../Panels/ExperiencePanel/ExperiencePanel.jsx";
+import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
+import bgPhoto from "/src/assets/App/background5.jpg";
 
 function App() {
-  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson Breakstone"});
+  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
 
   const changePanel = (tab) => {
-    console.log(tab)
-    setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab })
-  }
+    setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab });
+  };
 
   const changeBackground = (hoveredTab) => {
-    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel })
-  }
+    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel });
+  };
 
-  let panel;
+  let content;
   
   switch(currentPanel.activePanel) {
-    case "Dyson Breakstone":
-      panel = <ProfilePanel key={currentPanel.activePanel} />;
+    case "Dyson":
+      content = <ProfilePanel key={currentPanel.activePanel} />;
       break;
     case "About":
-      panel = <AboutPanel key={currentPanel.activePanel} />;
+      content = <AboutPanel key={currentPanel.activePanel} />;
       break;
     case "Experience":
-      panel = <ExperiencePanel key={currentPanel.activePanel} />;
+      content = <ExperiencePanel key={currentPanel.activePanel} />;
       break;
     case "Projects":
-      panel = <ProjectsPanel key={currentPanel.activePanel} />;
+      content = <ProjectsPanel key={currentPanel.activePanel} />;
       break;
     case "Pottery":
-      panel = <PotteryPanel key={currentPanel.activePanel} />;
+      content = <PotteryPanel key={currentPanel.activePanel} />;
       break;
-    }
+  };
 
   return (
-    <main className="w-screen h-screen overflow-auto p-8 ease-in ease-out duration-300" style={{background: `${currentPanel.backgroundColor}`}}>
-      <div className="w-full h-full rounded-lg" id="contentBox" style={{ backgroundColor: THEME_COLORS["panelDiv"] }}>
-        {panel}
-        <Menu panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
+    <main className="w-screen h-screen overflow-hidden">
+      <div className="w-full h-full bg-auto pt-28 overflow-auto" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
+        <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
+        {content}
       </div>
     </main>
   )
