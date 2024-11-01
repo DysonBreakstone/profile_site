@@ -7,6 +7,7 @@ const jobExperience = [
     "accomplishments": [
       "Created and implemented a webhook and database models to automate the ordering of and collection of weight data from Bodytrace scales, a remote, API-enabled weight tracking device.", 
       "Designed and implemented a new method of grouping and dynamically selecting text message content based on the individual attributes of participants, streamlining the main functionality of the application while maintaining backwards compatibility.",
+      "Enabled the visualization and CSV download of study-specific  text-message based surveys",
       "More than doubled test coverage with meaningful unit and integration tests."],
     "website": "https://www.softwareforresearch.com/",
     "logoUrl": "src/assets/ExperiencePanel/sfrLogo.png"

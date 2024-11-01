@@ -14,7 +14,7 @@ export default function Menu({ panel, changeBackground, changePanel }) {
   const menuItems = profileTabs.map(tab =>
     <li
       key={tab} 
-      className="flex w-1/5 justify-center items-center box-border h-16"  
+      className="flex justify-center items-center box-border h-16"  
       onMouseEnter={(e) => toggleTheme(tab)}
       onMouseLeave={(e) => toggleTheme(panel)}>
         <div className="flex text-end box-border">
@@ -32,7 +32,7 @@ export default function Menu({ panel, changeBackground, changePanel }) {
     <nav className="flex w-full justify-between shadow-lg px-4 fixed bg-white bg-opacity-70 top-0 z-50 p-2">
       <div id="profileIcon" className="rounded-full w-24 h-24 rounded-se-2xl shadow-2xl bg-cover" style={{ backgroundImage: `url(${profilePicture})`}}>
       </div>
-      <ul className="flex w-full items-center justify-between p-2">{menuItems}</ul>
+      <ul className="flex w-full items-center justify-end p-2 gap-12">{menuItems}</ul>
     </nav>
   );
 };

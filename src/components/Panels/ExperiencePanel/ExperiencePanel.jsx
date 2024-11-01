@@ -13,13 +13,15 @@ export default function ExperiencePanel() {
   const jobs = jobExperience.map(job =>
     <li
       key={`${job["organization"]}Card`} className="flex h-auto">
-        <div className="flex w-1/3 items-center justify-center">
-          <img src={job.logoUrl} className="aspect-auto h-1/2 rounded-xl"></img>
-        </div>
-        <div className="experience-card m-4 w-2/3">
-          <div className="flex flex-col w-full justify-between">
+        <div className="experience-card">
+          <div className="flex h-20 gap-4">
+          <div className="flex items-center justify-center">
+            <img src={job.logoUrl} className="aspect-auto h-full rounded-xl"></img>
+          </div>
+          <div className="flex flex-col w-1/2 justify-center border-y-2 border-l-2 pl-4">
             <h3 className="pb-1" >{job.organization}</h3>
             <a href={job["website"]} className="mb-1 w-max">Visit the website</a>
+          </div>
           </div>
           <div className="pb-2 border-b-2 w-full text-end mb-6">
             <h5 className="text-slate-700 pb-1">{job.title}</h5>
@@ -46,8 +48,8 @@ export default function ExperiencePanel() {
   return (
     <div 
       id="profilePanel"  
-      className={`h-full overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 p-8 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        <ul className="flex flex-col">
+      className={`h-full overflow-auto flex w-full bg-cover justify-left transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <ul className="flex flex-col gap-2">
           {jobs}
         </ul>
     </div>
