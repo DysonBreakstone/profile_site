@@ -3,7 +3,7 @@ import "./Pottery.css"
 import potteryInfo from "../../../../constants/AboutPanel/Pottery/potteryInfo.js"
 
 export default function Pottery() {
-  const [carouselPointer, setCarouselPointer] = useState(1);
+  const [carouselPointer, setCarouselPointer] = useState(0);
   const potCount = Object.keys(potteryInfo).length
 
   function handleCarouselIncrement(i) {

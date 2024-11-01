@@ -16,7 +16,7 @@ const jobExperience = [
     "organization": "Turing School of Software and design",
     "title": "Student (Back-end Engineering)",
     "dates": "January 2023 - August 2023",
-    "description": "Turing is an eight-month, 1,500 hour ACCET-accredited software engineering program. During this program, I spent ~70 hours per week learning everyting from the basics of OOP and TDD to advanced web design, while working in teams of 2-8 developers using AGILE methodologies to create and deploy full-stack web applications.",
+    "description": "Turing is an eight-month, 1,500 hour ACCET-accredited software engineering program. During this program, I spent ~70 hours per week learning everything from the basics of OOP and TDD to database and web architecture, while working in teams of 2-8 developers using AGILE methodologies to create and deploy full-stack web applications.",
     "website": "https://turing.edu/",
     "logoUrl": "src/assets/ExperiencePanel/turingLogo.png"
   },
