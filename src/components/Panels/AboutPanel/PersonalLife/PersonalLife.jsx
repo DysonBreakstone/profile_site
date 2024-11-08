@@ -2,7 +2,7 @@ import maroonBells from "../../../../assets/AboutPanel/maroonBells.jpg";
 
 export default function PersonalLife({handleImageLoaded, isLoaded}) {
   return (
-    <section key={"personalSubsection"} id="aboutContent" className="flex w-3/4 h-full justify-between items-center overflow-hidden">
+    <section key={"personalSubsection"} className="flex w-full about-section justify-between items-center overflow-hidden">
       <section id="aboutPhotoContainer" className="flex justify-center w-1/2">
         <img src={`${maroonBells}` } onLoad={handleImageLoaded} style={{ display: isLoaded ? "flex" : "none" }}/>
       </section>

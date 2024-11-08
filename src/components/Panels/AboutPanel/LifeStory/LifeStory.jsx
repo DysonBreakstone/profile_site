@@ -5,7 +5,7 @@ import "../AboutPanel.css"
 
 export default function Snapshot({handleImageLoaded, isLoaded}) {
   return (
-    <section key={"snapshotSubsection"} id="aboutContent" className="flex w-3/4 h-full justify-between items-center overflow-hidden">
+    <section key={"snapshotSubsection"} className="flex w-3/4 h-full justify-between items-center overflow-hidden">
       <section id="photoContainer" className="flex flex-col h-full w-1/2 overflow-auto no-scrollbar">
         <img src={`${pizzaOven}` } onLoad={handleImageLoaded} style={{ display: isLoaded ? "flex" : "none" }} className="border-b-2"/>
         <img src={`${developerDesk}` } onLoad={handleImageLoaded} style={{ display: isLoaded ? "flex" : "none" }} className="border-b-2"/>

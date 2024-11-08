@@ -6,25 +6,17 @@ import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
 import { THEME_COLORS } from "../../constants/themeColors.js";
 import Menu from "../Menu/Menu.jsx"
 import './App.css'
-import bgPhoto from "/src/assets/App/background5.jpg";
 
 function App() {
-  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "Dyson"});
+  const [currentPanel, setCurrentPanel] = useState({backgroundColor: THEME_COLORS.default, activePanel: "About"});
 
   const changePanel = (tab) => {
     setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab });
   };
 
-  const changeBackground = (hoveredTab) => {
-    setCurrentPanel({backgroundColor: hoveredTab, activePanel: currentPanel.activePanel });
-  };
-
   let content;
   
   switch(currentPanel.activePanel) {
-    case "Dyson":
-      content = <ProfilePanel key={currentPanel.activePanel} />;
-      break;
     case "About":
       content = <AboutPanel key={currentPanel.activePanel} />;
       break;
@@ -40,9 +32,9 @@ function App() {
   };
 
   return (
-    <main className="w-screen h-screen overflow-hidden">
-      <div className="w-full h-full bg-auto pt-28 overflow-auto" id="contentBox" style={{ backgroundImage: `url(${bgPhoto})`}}>
-        <Menu key="menu" panel={currentPanel.activePanel} changeBackground={changeBackground} changePanel={changePanel} />
+    <main className="bg-primary-bg w-screen h-screen">
+      <div className="w-full h-full overflow-auto no-scrollbar" id="contentBox">
+        <Menu key="menu" panel={currentPanel.activePanel} changePanel={changePanel} />
         {content}
       </div>
     </main>

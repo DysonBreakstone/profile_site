@@ -1,5 +1,4 @@
 const profileTabs = [
-  "Dyson",
   "About",
   "Experience",
   "Projects"

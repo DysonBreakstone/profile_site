@@ -1,26 +1,47 @@
-import stellarator from "../../../../assets/AboutPanel/stellarator.jpg"
+import headshot from "../../../../assets/AboutPanel/centerCroppedHeadshot2.jpg";
+import linkedInLogo from "../../../../assets/AboutPanel/linkedInLogo.webp";
+import githubLogo from "../../../../assets/AboutPanel/githubLogoWhite.webp";
+import resume from "../../../../assets/AboutPanel/resume.pdf"
 
-export default function Snapshot({handleImageLoaded, isLoaded}) {
+export default function Snapshot() {
   return (
-    <section key={"snapshotSubsection"} id="aboutContent" className="flex w-3/4 h-full justify-between items-center overflow-hidden">
-      <section id="aboutPhotoContainer" className="flex h-max justify-center w-1/2">
-        <img src={`${stellarator}` } onLoad={handleImageLoaded} style={{ display: isLoaded ? "flex" : "none" }}/>
-      </section>
-      <section id="aboutInfo" className="flex flex-col h-full border-slate-700 justify-center items-center p-8 gap-2 w-1/2 rounded-md bg-white bg-opacity-60 shadow-lg">
-        <div id="aboutDescription" className="flex flex-col text-slate-700 indent-4 text-wrap gap-2">
-          <p>
-            I am an early-career software engineer with 1.5 years of experience in web development.
-            My experience is primarily back-end focused, working with data-heavy web applications, 
-            and my first love will always be developing databases and APIs. However, during my time 
-            working in a startup environment, I have gained experience in nearly every facet of web 
-            development, including UI/UX design, database management, QA/QC, and direct collaboration with 
-            clients.
-          </p>
-          <p>
-            I am currently seeking a full time role. If you have room on your team for a dedicated and 
-            passionate developer, please reach out to me here.
-          </p>
-        </div>
+    <section id="snapshot" key={"snapshotSubsection"} className="flex w-full h-screen justify-start mt-12 bg-cover" style={{ backgroundImage: `url(${headshot})`}}>
+      <section className="flex w-full h-full bg-dark bg-opacity-30 p-8">
+        <section id="aboutInfo" className="w-full text-white flex flex-col items-start text-start justify-between h-full">
+          <div className="flex w-full justify-between mt-20 h-full">
+            <div className="flex flex-col gap-28">
+              <div className="flex flex-col gap-8">
+                <h2 className="text-white">Contact</h2>
+                <div className="flex gap-4 items-center">
+                  <h3>Email:</h3>
+                  <p style={{ fontSize: '1rem' }}>DysonBreakstone@gmail.com</p>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <h3>Phone:</h3>
+                  <p style={{ fontSize: '1rem' }}>(802) 595-0053</p>
+                </div>
+                <a href={{resume}} download="breakstoneResume" className="bg-secondary-accent p-2 rounded-full text-white w-max hover:text-dark">Download Resume</a>
+              </div>
+              <div className="flex flex-col gap-8">
+                <h2 className="flex text-hero-text-accent-2">Socials</h2>
+                <div className="flex gap-8">
+                  <a href="https://www.linkedin.com/in/dysonbreakstone/">
+                    <img src={linkedInLogo} className="w-12 h-12"></img>
+                  </a>
+                  <a href="https://github.com/DysonBreakstone">
+                    <img src={githubLogo} className="w-12 h-12"></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-8">
+              <h1>Dyson Breakstone</h1>
+              <h2 className="text-hero-text-accent">Software Engineer</h2>
+              <h2 className="text-hero-text-accent">Database Enthusiast</h2>
+              <h2 className="text-hero-text-accent">Gadabout</h2>
+            </div>
+          </div>
+        </section>
       </section>
     </section>
   )

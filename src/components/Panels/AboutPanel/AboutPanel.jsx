@@ -18,30 +18,17 @@ export default function AboutPanel() {
     setSubPanel(newSubPanel);
   };
 
-  let content;
-  
-  switch(subPanel) {
-    case "Snapshot":
-      content = <Snapshot isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
-      break;
-    case "Personal/Hobbies":
-      content = <PersonalLife isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
-      break;
-    case "Life Story":
-      content = <LifeStory isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
-      break;
-    case "Pottery":
-      content = <Pottery isLoaded={isLoaded} handleImageLoaded={handleImageLoaded} />;
-      break;
-  }
-
   return (
     <div 
       id="aboutPanel" 
-      className={`flex overflow-auto flex w-full h-full bg-cover items-top justify-end transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        {!isLoaded && <div id="loading"> Loading... </div>}
-      {content}
-      <AboutSubMenu subPanel={subPanel} changeSubPanel={changeSubPanel}/>
+      className={`flex flex-col no-scrollbar w-full overflow-auto`}>
+      <div className="flex flex-col w-full h-full">
+        <Snapshot />
+        <PersonalLife />
+        {/*<LifeStory />
+        <Pottery /> */}
+      </div>
+      {/* <AboutSubMenu subPanel={subPanel} changeSubPanel={changeSubPanel}/> */}
     </div>
   );
 };

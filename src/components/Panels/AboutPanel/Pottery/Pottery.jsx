@@ -11,7 +11,7 @@ export default function Pottery() {
   }
 
   return (
-    <section id="potterySubPanel" className="flex w-3/4 items-center justify-start">
+    <section id="potterySubPanel" className="flex items-center justify-start">
       <div id="potteryBlurb" className="flex h-full potteryBlurb bg-white bg-opacity-90 flex-col items-center text-center w-1/3 pt-28 text-slate-700 p-4">
         <p className="p-4 rounded-sm gap-4 indent-4 text-justify">
           I've been making pottery off and on for about three years.

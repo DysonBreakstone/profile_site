@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import profilePhoto from "../../../assets/ProfilePanel/uncroppedHeadshot.jpg";
-import greenMoonJar from "../../../assets/ProfilePanel/greenMoonJar.jpg"
-import sunrise from "../../../assets/ProfilePanel/sunrise.jpg"
+// import profilePhoto from "../../../assets/ProfilePanel/uncroppedHeadshot.jpg";
+// import greenMoonJar from "../../../assets/ProfilePanel/greenMoonJar.jpg"
+// import sunrise from "../../../assets/ProfilePanel/sunrise.jpg"
 
 
 export default function ProfilePanel() {

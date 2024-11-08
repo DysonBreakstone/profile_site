@@ -7,3 +7,19 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.about-subsection {
+  font-family: Georgia, sans-serif;
+}
+
+.buffer-header {
+  background-color: #faf0e6;
+}
+
+.about-section {
+  max-height: 400px;
+}
+
+.about-photo-container {
+  padding-bottom: 66.66666%
+}
