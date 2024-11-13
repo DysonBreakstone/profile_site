@@ -17,9 +17,22 @@
 }
 
 .about-section {
-  max-height: 400px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-section-content {
+  display: flex;
+  width: 750px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .about-photo-container {
   padding-bottom: 66.66666%
+}
+
+.about-subPanel-paragraph {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }

@@ -52,6 +52,7 @@ module.exports = {
       'dark': '#1a1a1a',
       'gray': '#fafafa',
       'blue': '#add8e6',
+      'light-blue': '#66b8f9',
       'primary-bg': '#f4f7fa',
       'accent-bg': '#e5e9ef',
       'primary-text': '#333333',

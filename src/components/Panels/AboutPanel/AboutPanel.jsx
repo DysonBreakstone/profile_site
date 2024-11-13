@@ -4,6 +4,8 @@ import Snapshot from "./Snapshot/Snapshot.jsx"
 import PersonalLife from "./PersonalLife/PersonalLife.jsx"
 import LifeStory from "./LifeStory/LifeStory.jsx"
 import Pottery from "./Pottery/Pottery.jsx"
+import Summary from "./Summary/Summary.jsx"
+import Technologies from "./Technologies/Technologies.jsx"
 
 
 export default function AboutPanel() {
@@ -21,13 +23,13 @@ export default function AboutPanel() {
   return (
     <div 
       id="aboutPanel" 
-      className={`flex flex-col no-scrollbar w-full overflow-auto`}>
-      <div className="flex flex-col w-full h-full">
+      className={`flex flex-col no-scrollbar w-full overflow-auto items-center`}>
         <Snapshot />
-        <PersonalLife />
+        <Summary />
+        <Technologies />
+        {/* <PersonalLife /> */}
         {/*<LifeStory />
         <Pottery /> */}
-      </div>
       {/* <AboutSubMenu subPanel={subPanel} changeSubPanel={changeSubPanel}/> */}
     </div>
   );

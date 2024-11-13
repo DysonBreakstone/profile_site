@@ -1,6 +1,7 @@
 import React from "react";
 import profileTabs from "../../constants/Menu/profileTabs.js";
 
+
 export default function Menu({ panel, changePanel }) {
 
   const menuItems = profileTabs.map(tab =>
@@ -23,7 +24,7 @@ export default function Menu({ panel, changePanel }) {
       <div>
         <a href="#snapshot" className="text-dark hover:text-dark" style={{ fontSize: '1.25rem'}}>Contact</a>
       </div>
-      <ul className="flex gap-6 p-2">{menuItems}</ul>
+      <ul className="flex gap-8 p-2">{menuItems}</ul>
     </nav>
   );
 };
