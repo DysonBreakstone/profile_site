@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProfilePanel from "../Panels/ProfilePanel/ProfilePanel.jsx";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutPanel from "../Panels/AboutPanel/AboutPanel.jsx";
 import ExperiencePanel from "../Panels/ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
@@ -26,18 +26,17 @@ function App() {
     case "Projects":
       content = <ProjectsPanel key={currentPanel.activePanel} />;
       break;
-    case "Pottery":
-      content = <PotteryPanel key={currentPanel.activePanel} />;
-      break;
   };
 
   return (
-    <main className="bg-primary-bg w-screen h-screen">
-      <div className="w-full h-full overflow-auto no-scrollbar" id="contentBox">
-        <Menu key="menu" panel={currentPanel.activePanel} changePanel={changePanel} />
-        {content}
-      </div>
-    </main>
+    <Router>
+      <main className="bg-primary-bg w-screen h-screen">
+        <div className="w-full h-full overflow-auto no-scrollbar" id="contentBox">
+          <Menu key="menu" panel={currentPanel.activePanel} changePanel={changePanel} />
+          {content}
+        </div>
+      </main>
+    </Router>
   )
 }
 

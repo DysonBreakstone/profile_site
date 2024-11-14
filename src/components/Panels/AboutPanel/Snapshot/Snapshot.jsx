@@ -38,7 +38,7 @@ export default function Snapshot() {
               <h1>Dyson Breakstone</h1>
               <h2 className="text-hero-text-accent">Software Engineer</h2>
               <h2 className="text-hero-text-accent">Data Enthusiast</h2>
-              <h2 className="text-hero-text-accent">Gadabout</h2>
+              <h2 className="text-hero-text-accent">Lifelong Learner</h2>
             </div>
           </div>
         </section>
