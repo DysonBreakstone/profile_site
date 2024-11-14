@@ -14,3 +14,11 @@
 .experience-card-paragraph {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.experience-blurb {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
