@@ -22,7 +22,7 @@ export default function Menu({ panel, changePanel }) {
   return (
     <nav className="flex w-full justify-between px-4 fixed border-accent-bg border-2 bg-gray bg-opacity-90 top-0 p-2 h-12 text-primary-text z-50 px-8">
       <div>
-        <a href="#snapshot" className="text-dark hover:text-dark" style={{ fontSize: '1.25rem'}}>Contact</a>
+        <a href="/#snapshot" className="text-dark hover:text-dark" style={{ fontSize: '1.25rem'}}>Contact</a>
       </div>
       <ul className="flex gap-8 p-2">{menuItems}</ul>
     </nav>

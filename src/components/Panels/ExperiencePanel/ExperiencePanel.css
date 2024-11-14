@@ -1,0 +1,16 @@
+.experience-card {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.experience-card-content {
+  display: flex;
+  width: 750px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.experience-card-paragraph {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

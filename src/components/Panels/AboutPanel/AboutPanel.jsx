@@ -21,11 +21,10 @@ export default function AboutPanel() {
   return (
     <div 
       id="aboutPanel" 
-      className={`flex flex-col no-scrollbar w-full overflow-auto items-center`}>
+      className={`flex flex-col no-scrollbar w-full overflow-auto items-center mt-12`}>
         <Snapshot />
         <Summary />
         <Technologies />
-        <Pottery />
         <HireMe />
     </div>
   );

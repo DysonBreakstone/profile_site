@@ -5,7 +5,7 @@ import resume from "../../../../assets/AboutPanel/resume.pdf"
 
 export default function Snapshot() {
   return (
-    <section id="snapshot" key={"snapshotSubsection"} className="flex w-full h-screen justify-start mt-12 bg-cover" style={{ backgroundImage: `url(${headshot})`}}>
+    <section id="snapshot" key={"snapshotSubsection"} className="flex w-full h-screen justify-start bg-cover" style={{ backgroundImage: `url(${headshot})`}}>
       <section className="flex w-full h-full bg-dark bg-opacity-30 p-8">
         <section id="aboutInfo" className="w-full text-white flex flex-col items-start text-start justify-between h-full">
           <div className="flex w-full justify-between mt-20 h-full">
