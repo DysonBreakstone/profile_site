@@ -1,7 +1,6 @@
 const profileTabs = [
   "About",
-  "Experience",
-  "Projects"
+  "Experience"
 ]
 
 export default profileTabs;
