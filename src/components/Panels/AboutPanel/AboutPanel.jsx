@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import AboutSubMenu from "./AboutSubMenu/AboutSubMenu.jsx";
 import Snapshot from "./Snapshot/Snapshot.jsx"
-import PersonalLife from "./PersonalLife/PersonalLife.jsx"
-import LifeStory from "./LifeStory/LifeStory.jsx"
 import Pottery from "./Pottery/Pottery.jsx"
 import Summary from "./Summary/Summary.jsx"
 import Technologies from "./Technologies/Technologies.jsx"
+import HireMe from "./HireMe/HireMe.jsx"
 
 
 export default function AboutPanel() {
@@ -27,10 +25,8 @@ export default function AboutPanel() {
         <Snapshot />
         <Summary />
         <Technologies />
-        {/* <PersonalLife /> */}
-        {/*<LifeStory />
-        <Pottery /> */}
-      {/* <AboutSubMenu subPanel={subPanel} changeSubPanel={changeSubPanel}/> */}
+        <Pottery />
+        <HireMe />
     </div>
   );
 };

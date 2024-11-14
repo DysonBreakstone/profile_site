@@ -11,11 +11,10 @@ export default function Technologies() {
     </li>
   );
 
-  console.log(technologies)
   return (
-    <section className="about-section bg-primary-bg justify-center content-center">
+    <section id="technologies" className="about-section bg-primary-bg justify-center content-center">
       <div className="about-section-content flex-col items-center">
-        <h1 className="w-full text-start text-primary-text mb-12">Languages, frameworks, and tools</h1>
+        <h1 className="w-full text-start text-secondary-text mb-12">Languages, frameworks, and tools</h1>
         <ul className="flex flex-wrap w-full justify-center gap-8 text-secondary-text">
           {technologies}
         </ul>

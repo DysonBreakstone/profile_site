@@ -11,33 +11,26 @@ export default function Pottery() {
   }
 
   return (
-    <section id="potterySubPanel" className="flex items-center justify-start">
-      <div id="potteryBlurb" className="flex h-full potteryBlurb bg-white bg-opacity-90 flex-col items-center text-center w-1/3 pt-28 text-slate-700 p-4">
-        <p className="p-4 rounded-sm gap-4 indent-4 text-justify">
-          I've been making pottery off and on for about three years.
-        </p>
-        <p className="p-4 rounded-sm gap-4 indent-4 text-justify">
-          Here are some pieces that I've made at my local community maker space, the <a href="https://tinkermill.org/">Tinkermill</a>.
-        </p>
-      </div>
-      <div id="pottery carousel" className="flex w-2/3 justify-center items-center h-full relative">
-        <div className="bg-white bg-opacity-70 flex-col items-center text-center text-slate-700 p-4 absolute bottom-6 rounded-sm">
-          <p>
-            {potteryInfo[carouselPointer]}
-          </p>
+    <section id="potterySubPanel" className="about-section bg-accent-bg flex items-center justify-center">
+      <div className="about-section-content">
+        <div className="flex flex-col w-full items-center">
+          <h1 id="potteryBlurb" className="flex h-full w-full text-end mb-16 text-primary-text">
+            I also make ceramics
+          </h1>
+          <div id="pottery carousel" className="flex w-full justify-between items-stretch h-full relative">
+            <div id="leftArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-1/4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="pr-1 size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(-1)}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </div>
+            <img src={`../../../../src/assets/AboutPanel/Pottery/pottery${carouselPointer}.jpg`} className="h-96 w-auto max-w-1/2"></img>
+            <div id="rightArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-1/4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(1)}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </div>
+          </div>
         </div>
-        <div id="leftArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="pr-1 size-12 hover:cursor-pointer hover:text-black text-white h-20" onClick={() => handleCarouselIncrement(-1)}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-          </svg>
-        </div>
-        <img src={`../../../../src/assets/AboutPanel/Pottery/pottery${carouselPointer}.jpg`} className="h-full w-auto"></img>
-        <div id="rightArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 hover:cursor-pointer hover:text-black text-white h-20" onClick={() => handleCarouselIncrement(1)}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-          </svg>
-        </div>
-
       </div>
     </section>
   )

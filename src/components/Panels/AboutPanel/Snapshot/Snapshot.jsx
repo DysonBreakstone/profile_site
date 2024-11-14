@@ -37,7 +37,7 @@ export default function Snapshot() {
             <div className="flex flex-col gap-8">
               <h1>Dyson Breakstone</h1>
               <h2 className="text-hero-text-accent">Software Engineer</h2>
-              <h2 className="text-hero-text-accent">Database Enthusiast</h2>
+              <h2 className="text-hero-text-accent">Data Enthusiast</h2>
               <h2 className="text-hero-text-accent">Gadabout</h2>
             </div>
           </div>
