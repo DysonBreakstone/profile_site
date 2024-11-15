@@ -19,13 +19,13 @@ export default function Pottery() {
           </h1>
           <div id="pottery carousel" className="flex w-full justify-between items-stretch h-full relative">
             <div id="leftArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-1/4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="pr-1 size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(-1)}>
+              <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="pr-1 size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(-1)}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
               </svg>
             </div>
             <img src={`../../../../src/assets/AboutPanel/Pottery/pottery${carouselPointer}.jpg`} className="h-96 w-auto max-w-1/2"></img>
             <div id="rightArrow" className="flex h-full items-center justify-center bg-black bg-opacity-30 w-1/4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(1)}>
+              <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 hover:cursor-pointer text-black h-20" onClick={() => handleCarouselIncrement(1)}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
               </svg>
             </div>
