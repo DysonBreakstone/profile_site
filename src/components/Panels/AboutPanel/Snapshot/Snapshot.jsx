@@ -5,6 +5,22 @@ import resume from "../../../../assets/AboutPanel/resume.pdf"
 import pushDown from "../../../../assets/AboutPanel/Snapshot/pushDown.svg";
 
 export default function Snapshot() {
+
+  const onButtonClick = () => {   
+    fetch(resume).then((response) => {
+        response.blob().then((blob) => {
+        
+            const fileURL =
+              window.URL.createObjectURL(blob);
+                
+            let alink = document.createElement("a");
+            alink.href = fileURL;
+            alink.download = "breakstoneResume.pdf";
+            alink.click();
+        });
+    });
+};
+
   return (
     <section id="snapshot" key={"snapshotSubsection"} className="flex w-full h-screen justify-start bg-cover" style={{ backgroundImage: `url(${headshot})`}}>
       <section className="flex w-full h-full bg-dark bg-opacity-30 p-8">
@@ -21,7 +37,7 @@ export default function Snapshot() {
                   <h3>Phone:</h3>
                   <p style={{ fontSize: '1rem' }}>{import.meta.env.VITE_PHONE_NUMBER || process.env.VITE_PHONE_NUMBER}</p>
                 </div>
-                <a href={{resume}} download="breakstoneResume" className="bg-secondary-accent p-2 rounded-full text-white w-max hover:text-dark">Download Resume</a>
+                <button onClick={onButtonClick} className="bg-secondary-accent p-2 rounded-full text-white w-max hover:text-dark">Download Resume</button>
               </div>
               <div className="flex flex-col gap-8">
                 <h2 className="flex text-hero-text-accent-2">Socials</h2>
