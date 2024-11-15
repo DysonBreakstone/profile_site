@@ -2,6 +2,7 @@ import headshot from "../../../../assets/AboutPanel/centerCroppedHeadshot2.jpg";
 import linkedInLogo from "../../../../assets/AboutPanel/linkedInLogo.webp";
 import githubLogo from "../../../../assets/AboutPanel/githubLogoWhite.webp";
 import resume from "../../../../assets/AboutPanel/resume.pdf"
+import pushDown from "../../../../assets/AboutPanel/Snapshot/pushDown.svg";
 
 export default function Snapshot() {
   return (
@@ -34,11 +35,14 @@ export default function Snapshot() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
-              <h1>Dyson Breakstone</h1>
-              <h2 className="text-hero-text-accent">Software Engineer</h2>
-              <h2 className="text-hero-text-accent">Data Enthusiast</h2>
-              <h2 className="text-hero-text-accent">Lifelong Learner</h2>
+            <div className="flex flex-col justify-between">
+              <div className="flex flex-col gap-8">
+                <h1>Dyson Breakstone</h1>
+                <h2 className="text-hero-text-accent">Software Engineer</h2>
+                <h2 className="text-hero-text-accent">Data Enthusiast</h2>
+                <h2 className="text-hero-text-accent">Lifelong Learner</h2>
+              </div>
+              <img src={pushDown} className="h-20 mb-12"></img>
             </div>
           </div>
         </section>

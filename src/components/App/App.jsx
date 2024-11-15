@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ScrollToTop from "../ScrollToTop.jsx";
 import AboutPanel from "../Panels/AboutPanel/AboutPanel.jsx";
 import ExperiencePanel from "../Panels/ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <main className="bg-primary-bg w-screen h-screen">
         <div className="w-full h-full overflow-auto no-scrollbar" id="contentBox">
+          <ScrollToTop />
           <Menu key="menu" panel={currentPanel.activePanel} changePanel={changePanel} />
           <Routes>
             <Route path="/" element={<Navigate to="/about" />} />
