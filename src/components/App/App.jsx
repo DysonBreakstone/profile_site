@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import AboutPanel from "../Panels/AboutPanel/AboutPanel.jsx";
 import ExperiencePanel from "../Panels/ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "../Panels/ProjectsPanel/ProjectsPanel.jsx";
@@ -13,27 +13,18 @@ function App() {
   const changePanel = (tab) => {
     setCurrentPanel({ backgroundColor: THEME_COLORS[tab], activePanel: tab });
   };
-
-  let content;
-  
-  switch(currentPanel.activePanel) {
-    case "About":
-      content = <AboutPanel key={currentPanel.activePanel} />;
-      break;
-    case "Experience":
-      content = <ExperiencePanel key={currentPanel.activePanel} />;
-      break;
-    case "Projects":
-      content = <ProjectsPanel key={currentPanel.activePanel} />;
-      break;
-  };
-
+        
   return (
     <Router>
       <main className="bg-primary-bg w-screen h-screen">
         <div className="w-full h-full overflow-auto no-scrollbar" id="contentBox">
           <Menu key="menu" panel={currentPanel.activePanel} changePanel={changePanel} />
-          {content}
+          <Routes>
+            <Route path="/" element={<Navigate to="/about" />} />
+            <Route path="/about" element={<AboutPanel key={currentPanel.activePanel} />} />
+            <Route path="/experience" element={<ExperiencePanel key={currentPanel.activePanel} />} />
+            <Route path="/projects" element={<ProjectsPanel key={currentPanel.activePanel} />} />
+          </Routes>
         </div>
       </main>
     </Router>
