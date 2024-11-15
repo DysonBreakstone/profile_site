@@ -1,9 +1,8 @@
 import React from "react";
 import ecg from "../../../../assets/AboutPanel/History/ecg.svg"
-import leaf from "../../../../assets/AboutPanel/History/leaf.svg"
+import leaves from "../../../../assets/AboutPanel/History/leaves.svg"
 import platter from "../../../../assets/AboutPanel/History/platter.svg"
-import gradCap from "../../../../assets/AboutPanel/History/gradCap.svg"
-import compdb from "../../../../assets/AboutPanel/History/compdb.png"
+import student from "../../../../assets/AboutPanel/History/student.svg"
 
 export default function History() {
   return (
@@ -28,13 +27,13 @@ export default function History() {
               </p>
             </div>
             <div className="flex gap-4 items-center">
-              <img src={gradCap} className="h-6"></img>
+              <img src={student} className="h-6"></img>
               <p className="experience-card-paragraph">
                 Education
               </p>
             </div>
             <div className="flex gap-4 items-center">
-              <img src={leaf} className="h-6"></img>
+              <img src={leaves} className="h-6"></img>
               <p className="experience-card-paragraph">
                 Environmental Nonprofit
               </p>
