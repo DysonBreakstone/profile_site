@@ -14,7 +14,7 @@ export default function HireMe() {
           <div className="flex items-center gap-8">
             <img src={rocket} className="h-10"></img> 
             <p className="text-primary-bg">
-              My greatest ambition is to join a software team where I can use my passion and experience to create solutions that improve people's lives.
+              It's my highest ambition to join a software team where I can use my passion and experience to create solutions that improve people's lives.
             </p>
           </div>
           <div className="flex items-center gap-8">
