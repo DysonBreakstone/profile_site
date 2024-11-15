@@ -19,7 +19,7 @@ export default function Snapshot() {
                 </div>
                 <div className="flex gap-4 items-center">
                   <h3>Phone:</h3>
-                  <p style={{ fontSize: '1rem' }}>(802) 595-0053</p>
+                  <p style={{ fontSize: '1rem' }}>{import.meta.env.VITE_PHONE_NUMBER}</p>
                 </div>
                 <a href={{resume}} download="breakstoneResume" className="bg-secondary-accent p-2 rounded-full text-white w-max hover:text-dark">Download Resume</a>
               </div>
