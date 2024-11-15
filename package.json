@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "node app.jsx",
+    "start": "serve -s dist",
     "heroku-postbuild": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
