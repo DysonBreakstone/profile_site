@@ -12,7 +12,7 @@ export default function Technologies() {
   );
 
   return (
-    <section id="technologies" className="about-section bg-accent-bg justify-center content-center py-12">
+    <section id="technologies" className="about-section px-4 md:px-0 bg-accent-bg justify-center content-center py-12">
       <div className="about-section-content flex-col items-center">
         <h1 className="w-full text-start mb-12">Languages, frameworks, and tools</h1>
         <ul className="flex flex-wrap w-full justify-center gap-8 text-secondary-text">

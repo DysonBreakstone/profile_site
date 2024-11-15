@@ -7,19 +7,20 @@ import compdb from "../../../../assets/AboutPanel/History/compdb.png"
 
 export default function History() {
   return (
-    <div className="about-section justify-start flex-col gap-8 items-center py-12">
-      <div className="about-section-content flex-col items-center">
-        <div className="flex w-full items-start">
-          <h1 className="mb-12 text-secondary-text">My History</h1>
+    <div className="about-section flex-col gap-8 py-12 items-center">
+      <div className="about-section-content flex-col md:flex-row md:justify-between">
+        <div className="w-full md:w-1/2">
+          <div className="flex w-full items-start">
+            <h1 className="mb-8 text-secondary-text">My History</h1>
+          </div>
+          <div className="flex gap-4 items-center mb-12 w-full">
+            <p className="experience-card-paragraph text-wrap md:w-full">
+              Before becoming software engineer, I gained experience in a variety of fields.
+            </p>
+          </div>
         </div>
-        <div className="flex gap-4 items-center mb-12">
-          <img src={compdb} className="h-10"></img>
-          <p className="experience-card-paragraph">
-            Prior to my career in Software Development, I gained experience in:
-          </p>
-        </div>
-        <div className="flex flex-col w-full items-center">
-          <div className="flex flex-col w-1/2 gap-4">
+        <div className="flex flex-col w-max">
+          <div className="flex flex-col n gap-4">
             <div className="flex gap-4 items-center">
               <img src={ecg} className="h-6"></img>
               <p className="experience-card-paragraph">

@@ -1,10 +1,14 @@
 import headshot from "../../../../assets/AboutPanel/centerCroppedHeadshot2.jpg";
+import mobileHeadshot from "../../../../assets/AboutPanel/uncroppedHeadshot.jpg";
 import linkedInLogo from "../../../../assets/AboutPanel/linkedInLogo.webp";
 import githubLogo from "../../../../assets/AboutPanel/githubLogoWhite.webp";
 import resume from "../../../../assets/AboutPanel/resume.pdf"
 import pushDown from "../../../../assets/AboutPanel/Snapshot/pushDown.svg";
 
 export default function Snapshot() {
+
+  const isMobile = window.innerWidth < 768;
+  const headshotImage = isMobile ? mobileHeadshot : headshot
 
   const onButtonClick = () => {   
     fetch(resume).then((response) => {
@@ -22,12 +26,20 @@ export default function Snapshot() {
 };
 
   return (
-    <section id="snapshot" key={"snapshotSubsection"} className="flex w-full h-screen justify-start bg-cover" style={{ backgroundImage: `url(${headshot})`}}>
+    <section id="snapshot" key={"snapshotSubsection"} className="flex md:w-full w-auto h-screen justify-start bg-cover" style={{ backgroundImage: `url(${headshotImage})` }}>
       <section className="flex w-full h-full bg-dark bg-opacity-30 p-8">
         <section id="aboutInfo" className="w-full text-white flex flex-col items-start text-start justify-between h-full">
-          <div className="flex w-full justify-between mt-20 h-full">
-            <div className="flex flex-col gap-28">
-              <div className="flex flex-col gap-8">
+          <div className="flex flex-col md:flex-row w-full md:justify-between md:mt-20 h-full">
+            <div className="flex flex-col justify-between">
+              <div className="flex flex-col gap-2 md:gap-8">
+                <h1>Dyson Breakstone</h1>
+                <h2 className="text-hero-text-accent">Software Engineer</h2>
+                <h2 className="text-hero-text-accent">Data Enthusiast</h2>
+                <h2 className="text-hero-text-accent">Lifelong Learner</h2>
+              </div>
+            </div>
+            <div className="flex flex-col gap-12 md:gap-28 mt-10 md:mt-0">
+              <div className="flex flex-col gap-2 md:gap-8">
                 <h2 className="text-white">Contact</h2>
                 <div className="flex gap-4 items-center">
                   <h3>Email:</h3>
@@ -50,15 +62,6 @@ export default function Snapshot() {
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex flex-col gap-8">
-                <h1>Dyson Breakstone</h1>
-                <h2 className="text-hero-text-accent">Software Engineer</h2>
-                <h2 className="text-hero-text-accent">Data Enthusiast</h2>
-                <h2 className="text-hero-text-accent">Lifelong Learner</h2>
-              </div>
-              <img src={pushDown} className="h-20 mb-12"></img>
             </div>
           </div>
         </section>

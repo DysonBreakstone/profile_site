@@ -5,12 +5,12 @@ import candidate from "../../../../assets/AboutPanel/HireMe/candidate.svg";
 
 export default function HireMe() {
   return (
-    <div className="about-section bg-secondary-text items-center">
-      <div className="about-section-content items-center">
-        <h1 className="text-hero-text-accent min-w-1/3">
+    <div className="about-section flex-col md:flex-row bg-secondary-text items-center">
+      <div className="about-section-content md:px-4 py-8 md:px-0 flex-col md:flex-row items-center">
+        <h1 className="text-hero-text-accent mb-8 md:mb-0 min-w-1/3">
           I'm currently seeking a full-time position
         </h1>
-        <div className="flex flex-col px-8 gap-4">
+        <div className="flex flex-col md:px-8 gap-4">
           <div className="flex items-center gap-8">
             <img src={rocket} className="h-10"></img> 
             <p className="text-primary-bg">

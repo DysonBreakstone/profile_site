@@ -21,8 +21,8 @@ export default function Menu({ panel, changePanel }) {
   );
   
   return (
-    <nav className="flex w-full justify-end px-4 fixed border-accent-bg border-2 bg-gray bg-opacity-90 top-0 p-2 h-12 text-primary-text z-50 px-8">
-      <ul className="flex gap-12 p-2 pb-4">{menuItems}</ul>
+    <nav className="flex w-full justify-end px-2 fixed border-accent-bg border-2 bg-gray bg-opacity-90 top-0 p-2 h-12 text-primary-text z-50 md:px-8">
+      <ul className="flex gap-8 md:gap-12 p-2 pb-2 justify-end mr-4 md:">{menuItems}</ul>
     </nav>
   );
 };
