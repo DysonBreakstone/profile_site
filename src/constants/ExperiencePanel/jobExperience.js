@@ -1,6 +1,7 @@
 import researchPhoto from "../../../src/assets/ExperiencePanel/croppedResearchImage.jpg"
 import bootcampImage from "../../../src/assets/ExperiencePanel/developerDesk2.jpg"
 import cta from "../../../src/assets/ExperiencePanel/sagMIP2.jpg"
+import ctBanner from "../../../src/assets/ExperiencePanel/ctImages.jpeg"
 
 const jobExperience = [
   {
@@ -30,7 +31,7 @@ const jobExperience = [
     "dates": "January 2022 - December 2022",
     "description": "During my time at fusion, I traveled to hospitals which faced understaffing due to the pandemic. As a radiologic imaging technologist, it was my job to work and communicate with an interdisciplinary team to collect and deliver accurate health data in often life or death circumstances.",
     "website": "https://www.fusionmedstaff.com/",
-    "titlePhoto": cta
+    "titlePhoto": ctBanner
   }
 ];
 
